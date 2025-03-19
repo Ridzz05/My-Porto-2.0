@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback, memo } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { usePathname } from 'next/navigation'
+import { HiMenu, HiX } from 'react-icons/hi'
 
 // Types
 type NavItem = {
@@ -188,6 +190,7 @@ const MemoizedMobileMenu = memo(({
 const NavbarClient = () => {
     const [isOpen, setIsOpen] = useState(false);
     const isVisible = useScrollDirection();
+    const pathname = usePathname();
 
     const scrollToSection = useCallback((sectionId: string) => {
         const element = document.getElementById(sectionId);
@@ -207,7 +210,8 @@ const NavbarClient = () => {
             <AnimatePresence>
                 {isVisible && (
                     <motion.nav 
-                        className="fixed w-full top-0 z-50 px-4 py-3"
+                        className={`fixed w-full top-0 z-50 px-4 py-3 transition-all duration-300
+                            ${pathname === '/home' ? 'bg-white/80 backdrop-blur-sm shadow-sm' : 'bg-transparent py-6'}`}
                         initial={{ y: -100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -100, opacity: 0 }}
@@ -220,12 +224,12 @@ const NavbarClient = () => {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
-                                    <button 
+                                    <Link 
+                                        href="/"
                                         className="text-[#8B4513] text-xl font-bold font-montserrat"
-                                        onClick={() => scrollToSection('home')}
                                     >
-                                        Portfolio
-                                    </button>
+                                        Rizki
+                                    </Link>
                                 </motion.div>
 
                                 <MemoizedDesktopMenu 
@@ -241,18 +245,7 @@ const NavbarClient = () => {
                                         onClick={() => setIsOpen(!isOpen)}
                                         className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-[#8B4513] hover:bg-[#f5e6d3] transition-colors duration-200"
                                     >
-                                        <svg
-                                            className="h-6 w-6"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            {isOpen ? (
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                                            ) : (
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                                            )}
-                                        </svg>
+                                        {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
                                     </motion.button>
                                 </div>
                             </div>
