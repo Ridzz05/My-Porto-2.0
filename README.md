@@ -94,3 +94,46 @@ Silakan berkontribusi dengan membuat pull request atau melaporkan issues.
 Muhammad Rizki Al Ghifari
 - GitHub: [@Ridzz05](https://github.com/Ridzz05)
 - Email: muhrizkialghipari@gmail.com
+
+## Environment Setup
+
+This project uses environment variables for configuration. To set up your local environment:
+
+1. Copy `.env.example` to `.env`:
+```bash
+cp .env.example .env
+```
+
+2. Update the values in `.env` with your configuration:
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+NEXT_PUBLIC_CONTACT_EMAIL=your_email@example.com
+```
+
+3. For Cloudflare Pages deployment:
+   - Add these environment variables in your Cloudflare Pages dashboard
+   - Go to Settings > Environment variables
+   - Add all variables from `.env.example` with your values
+   - Make sure to set them for both Production and Preview environments if needed
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+## Building for Production
+
+```bash
+# Create production build
+npm run build
+
+# Start production server
+npm start
+```
