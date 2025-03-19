@@ -49,6 +49,22 @@ npm run dev
 
 5. Buka [http://localhost:3000](http://localhost:3000) di browser
 
+## 🚀 Deployment
+
+### Cloudflare Pages
+
+1. Fork repository ini
+2. Buat project baru di Cloudflare Pages
+3. Hubungkan dengan repository yang sudah di-fork
+4. Pada pengaturan build:
+   - Build command: `npm run build`
+   - Build output directory: `out`
+5. Di bagian Environment Variables, tambahkan:
+   - `NODE_VERSION`: `18.x`
+6. Di bagian Compatibility Flags, tambahkan:
+   - `nodejs_compat`
+7. Deploy!
+
 ## 🔧 Konfigurasi
 
 - Font yang digunakan:
