@@ -100,6 +100,7 @@ const MemoizedDropdownMenu = memo(({ scrollToSection }: { scrollToSection: (sect
         </div>
     </motion.div>
 ));
+MemoizedDropdownMenu.displayName = 'MemoizedDropdownMenu';
 
 const MemoizedDesktopMenu = memo(({ 
     isOpen, 
@@ -147,6 +148,7 @@ const MemoizedDesktopMenu = memo(({
         </div>
     </div>
 ));
+MemoizedDesktopMenu.displayName = 'MemoizedDesktopMenu';
 
 const MemoizedMobileMenu = memo(({ 
     isOpen, 
@@ -186,6 +188,7 @@ const MemoizedMobileMenu = memo(({
         )}
     </AnimatePresence>
 ));
+MemoizedMobileMenu.displayName = 'MemoizedMobileMenu';
 
 const NavbarClient = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -258,5 +261,6 @@ const NavbarClient = () => {
         </>
     );
 };
+NavbarClient.displayName = 'NavbarClient';
 
 export default NavbarClient;
