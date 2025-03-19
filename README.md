@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
 
-## Getting Started
+Portfolio website yang dibangun menggunakan Next.js 14, TypeScript, dan Tailwind CSS. Website ini menampilkan karya-karya dalam bidang Web Development, Mobile Apps, dan UI/UX Design.
 
-First, run the development server:
+## 🚀 Fitur
 
+- **Responsive Design**: Tampilan yang optimal di desktop dan mobile
+- **Modern UI**: Menggunakan Tailwind CSS dengan tema coklat yang elegan
+- **Smooth Animations**: Menggunakan Framer Motion untuk animasi yang halus
+- **Type Safety**: Menggunakan TypeScript untuk keamanan tipe data
+- **Performance**: Optimized dengan Next.js 14
+- **Sections**:
+  - Hero Section
+  - Project Showcase
+  - Web Development
+  - Mobile Apps
+  - UI/UX Design
+  - Contact Form
+
+## 🛠️ Teknologi yang Digunakan
+
+- [Next.js 14](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+## 📦 Instalasi
+
+1. Clone repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Ridzz05/My-Porto-2.0.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Masuk ke direktori project
+```bash
+cd My-Porto-2.0
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install dependencies
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Jalankan development server
+```bash
+npm run dev
+```
 
-## Learn More
+5. Buka [http://localhost:3000](http://localhost:3000) di browser
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Konfigurasi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Font yang digunakan:
+  - Montserrat untuk heading
+  - Quicksand untuk body text
+- Warna tema: 
+  - Primary: #8B4513 (Brown)
+  - Secondary: #723a0f (Dark Brown)
+  - Background: #fdf6e3 (Light Beige)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📱 Responsive Breakpoints
 
-## Deploy on Vercel
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Kontribusi
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Silakan berkontribusi dengan membuat pull request atau melaporkan issues.
+
+## 📄 Lisensi
+
+[MIT License](LICENSE)
+
+## 👤 Author
+
+Muhammad Rizki Al Ghifari
+- GitHub: [@Ridzz05](https://github.com/Ridzz05)
+- Email: muhrizkialghipari@gmail.com
